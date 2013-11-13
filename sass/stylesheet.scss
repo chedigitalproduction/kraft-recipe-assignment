@@ -80,8 +80,11 @@ header {
 		margin: 10px 4% 0 0;
 		float: left;
 		a.home {
-			//font-size: 0px;
-			//@include icons-sprite(logo);
+			text-indent: -9999px;
+			@include icons-sprite(logo);
+			display: block;
+			background: url(logo.png);
+			content: "";
 		};
 	};
 	nav {
