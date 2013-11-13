@@ -217,9 +217,8 @@ body {
 	width: 60%;
 	margin: 85px 2.5% 0 0 ;
 	padding: 0 0 0 5%;
-	display: block;
+	display: none;
 	color: $mainPurple;
-	//@include animate(fadeIn 1.25s ease 1);
 	.title {
 		font-size: 6em;
 		line-height: 1em;
