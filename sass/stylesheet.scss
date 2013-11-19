@@ -16,7 +16,7 @@ $footerPurple: #69206b;
 
 @mixin font-smoothing($value: antialiased) {
 		-webkit-font-smoothing: $value;
-	};	
+	};
 
 html {
 	font-size: 100%;
@@ -42,7 +42,7 @@ h1 {
 
 h3 {
 	margin: 0 0 1.5em;
-};			
+};
 
 ul {
 	list-style: none;
@@ -83,7 +83,6 @@ header {
 			text-indent: -9999px;
 			@include icons-sprite(logo);
 			display: block;
-			background: url(logo.png);
 			content: "";
 		};
 	};
@@ -99,7 +98,7 @@ header {
 			float: left;
 			@include transition(background .2s);
 		};
-	};	
+	};
 	.social-media {
 		width: 300px;
 		position: absolute;
@@ -109,7 +108,7 @@ header {
 			float: left;
 			margin-left: 10px;
 		};
-	};			
+	};
 };
 
 main {
@@ -171,7 +170,7 @@ body {
 			line-height: 1;
 			border-radius: 40px;
 			box-shadow: 0px 4px 0px rgba(0,0,0,.2);
-		};	
+		};
 	};
 	.container {
 		position: relative;
@@ -202,7 +201,7 @@ body {
 			border-radius: 5px 5px 0 0;
 			display: block;
 			box-sizing: border-box;
-		};	
+		};
 		a.active {
 			color: $mainPurple;
 			background-color: $white;
@@ -210,8 +209,8 @@ body {
 			pointer-events: none;
 		};
 	};
-};	
-	
+};
+
 .recipe {
 	float: right;
 	width: 60%;
@@ -229,7 +228,7 @@ body {
 		line-height: 1.7em;
 		display: inline-block;
 		margin: 5px 40px 15px 0;
-	};	
+	};
 	.time:before {
 		top: 10px;
 		left: 2px;
@@ -310,7 +309,7 @@ body {
 				display: block;
 				@include transition(none);
 			};
-		}; 
+		};
 	};
 	.nutrition h4 {
 		font-size: 2.4em;
@@ -342,8 +341,8 @@ body {
 			left: -24px;
 		};
 	};
-};	
-		
+};
+
 footer {
 	min-width: 1024px;
 	float: left;
@@ -360,7 +359,7 @@ footer {
 		padding: 0 2.5%;
 		position: relative;
 		margin: 0 auto;
-	};	
+	};
 	.wrapper:first-child {
 		max-width: 300px;
 	};
@@ -408,11 +407,11 @@ footer {
 			padding: 5px 17.85%;
 			border-radius: 10px;
 		};
-	};	
-};		
-	
-	
-		
+	};
+};
+
+
+
 
 
 
