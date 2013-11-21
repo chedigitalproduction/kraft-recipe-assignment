@@ -77,7 +77,7 @@ header {
 	display: block;
 	h1 {
 		width: 314px;
-		margin: 10px 4% 0 0;
+		margin: 3px 4% 0 0;
 		float: left;
 		a.home {
 			text-indent: -9999px;
@@ -90,24 +90,48 @@ header {
 		margin-top: 12px;
 		a {
 			padding: 5px 1.85%;
-			margin: 0px 2px;
+			margin: 1px 1px 0 0;
 			font-size: 1.8em;
 			font-family: "NeutraText-BoldItalicAlt", sans-serif;
 			color: $white;
 			border-radius: 10px;
 			float: left;
 			@include transition(background .2s);
-		};
+		};	
 	};
 	.social-media {
 		width: 300px;
 		position: absolute;
-		top: 16px;
+		top: 3px;
 		right: 0;
 		li {
 			float: left;
 			margin-left: 10px;
 		};
+		a.facebook {
+			text-indent: -9999px;
+			@include icons-sprite(fb_dark);
+			display: block;
+			content: "";
+		};
+		a.twitter {
+			text-indent: -9999px;
+			@include icons-sprite(twitter_dark);
+			display: block;
+			content: "";
+		};
+		a.pinterest {
+			text-indent: -9999px;
+			@include icons-sprite(pinterest_dark);
+			display: block;
+			content: "";
+		};
+		/*a.email {
+			text-indent: -9999px;
+			@include icons-sprite(email_dark);
+			display: block;
+			content: "";
+		};*/
 	};
 };
 
@@ -171,6 +195,16 @@ body {
 			border-radius: 40px;
 			box-shadow: 0px 4px 0px rgba(0,0,0,.2);
 		};
+		a:before {
+			@include icons-sprite(back_button);
+			display: inline-block;
+			content: "";
+			float: left;
+			margin-top: -6px;
+			left: 25px;
+			position: absolute;
+			top: 43%;
+		}
 	};
 	.container {
 		position: relative;
