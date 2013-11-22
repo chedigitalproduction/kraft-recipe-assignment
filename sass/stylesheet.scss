@@ -3,7 +3,6 @@
 @import "compass/css3/transform";
 @import "compass/utilities/sprites/base";
 @import "icons/*.png";
-//@include all-icons-sprites;
 $icons-sprite-dimensions: true;
 
 $mainPurple: #78297a;
@@ -100,38 +99,84 @@ header {
 		};	
 	};
 	.social-media {
-		width: 300px;
+		width: 375px;
 		position: absolute;
-		top: 3px;
+		top: 0px;
 		right: 0;
 		li {
 			float: left;
-			margin-left: 10px;
+			margin-left: 7px;
+			bottom: 0px;
 		};
+		.share {
+			@include icons-sprite(share);
+			content: "";
+			text-indent: -9999em;
+			margin-top: 14px;
+			margin-right: 10px;
+		}
 		a.facebook {
 			text-indent: -9999px;
-			@include icons-sprite(fb_dark);
+			@include icons-sprite(fb_top);
 			display: block;
 			content: "";
-		};
+			height: 45px;
+			width: 40px;
+		}	
+		a.facebook:hover {
+			@include icons-sprite(fb_top_alt);
+			content: "";
+			display: block;
+			height: 45px;
+			width: 40px;
+		}	
 		a.twitter {
 			text-indent: -9999px;
-			@include icons-sprite(twitter_dark);
+			@include icons-sprite(tw_top);
 			display: block;
 			content: "";
+			height: 45px;
+			width: 40px;
 		};
+		a.twitter:hover {
+			@include icons-sprite(tw_top_alt);
+			content: "";
+			display: block;
+			height: 42px;
+			width: 40px;
+		}
 		a.pinterest {
 			text-indent: -9999px;
-			@include icons-sprite(pinterest_dark);
+			@include icons-sprite(pn_top);
 			display: block;
 			content: "";
+			height: 41px;
+			width: 40px;
+			margin-top: 2px;
 		};
-		/*a.email {
+		a.pinterest:hover {
+			@include icons-sprite(pn_top_alt);
+			content: "";
+			display: block;
+			height: 45px;
+			width: 40px;
+		}
+		a.email {
 			text-indent: -9999px;
-			@include icons-sprite(email_dark);
+			@include icons-sprite(em_top);
 			display: block;
 			content: "";
-		};*/
+			height: 45px;
+			width: 40px;
+			margin-top: -2px;			
+		};
+		a.email:hover {
+			@include icons-sprite(em_top_alt);
+			content: "";
+			display: block;
+			height: 45px;
+			width: 40px;
+		}
 	};
 };
 
@@ -172,7 +217,7 @@ body {
 			max-width: 399px;
 			margin: 0;
 			display: block;
-		};
+	};
 	.back-button {
 		position: absolute;
 		top: 40px;
@@ -264,11 +309,13 @@ body {
 		margin: 5px 40px 15px 0;
 	};
 	.time:before {
-		top: 10px;
+		top: 14px;
 		left: 2px;
+		@include icons-sprite(prep);
 	};
 	.servings:before {
-		top: 5px;
+		top: 12px;
+		@include icons-sprite(servings)
 	};
 	.time:before, .servings:before {
 		content: "";
@@ -319,7 +366,7 @@ body {
 	.share-bar:after {
 		@extend .share-bar:before;
 		margin-bottom: 10px;
-		margin-top: 50px;
+		margin-top: 12px;
 	};
 	.share-bar {
 		h4, ul, li {
@@ -331,10 +378,10 @@ body {
 			line-height: 1.7em;
 		};
 		.social-media {
-			margin: 1.2em 0 0 15px;
+			margin: .8em 0 0 15px;
 			position: absolute;
 			li {
-				margin: 0 5px;
+				margin: 0 3px;
 			};
 			a {
 				text-indent: -999em;
@@ -342,7 +389,57 @@ body {
 				overflow: hidden;
 				display: block;
 				@include transition(none);
+				float: right;
 			};
+			a.facebook {
+				@include icons-sprite(fb_mid);
+				content: "";
+				height: 42px;
+				width: 42px;
+				margin-top: -10px;
+			};
+			a.facebook:hover {
+				@include icons-sprite(fb_mid_alt);
+				content: "";
+				height: 46px;
+				width: 42px;
+			}
+			a.twitter {
+				@include icons-sprite(tw_mid);
+				content: "";
+				height: 42px;
+				width: 42px;
+			};
+			a.twitter:hover {
+				@include icons-sprite(tw_mid_alt);
+				content: "";
+				height: 42px;
+				width: 42px;
+			}
+			a.pinterest {
+				@include icons-sprite(pn_mid);
+				content: "";
+				height: 42px;
+				width: 42px;
+			};
+			a.pinterest:hover {
+				@include icons-sprite(pn_mid_alt);
+				content: "";
+				height: 41px;
+				width: 42px;
+			}			
+			a.email {
+				@include icons-sprite(em_mid);
+				content: "";
+				height: 42px;
+				width: 42px;
+			};
+			a.email:hover {
+				@include icons-sprite(em_mid_alt);
+				content: "";
+				height: 43px;
+				width: 42px;
+			}			
 		};
 	};
 	.nutrition h4 {
@@ -401,13 +498,30 @@ footer {
 		float: left;
 		margin: 0 0 50px;
 		border: 0;
+		text-indent: -9999em;
+		@include icons-sprite(logo2);
+		content: "";
 	};
 	.social-media {
 		float: right;
-		margin: 20px 0 0;
-		.twitter {
+		margin: 20px 0 0 210px;
+		position: absolute;
+		a.twitter {
+			text-indent: -9999em;
 			@include transition(none);
+			@include icons-sprite(tw_foot);
+			content: "";
+			display: block;
+			height: 80px;
+			width: 80px;
 		};
+		a.twitter:hover {
+			@include icons-sprite(tw_foot_alt);
+			content: "";
+			display: block;
+			height: 80px;
+			width: 80px;
+		}
 	};
 	li {
 		float: left;
