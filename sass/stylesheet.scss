@@ -15,7 +15,6 @@ $grey: #dedede;
 $darkPurple: #551c57;
 $lightPurple: #9d3ea1;
 $footerPurple: #69206b;
-$neutrabook: "Neutraface-Book", sans-serif;
 
 @mixin font-smoothing($value: antialiased) {
 		-webkit-font-smoothing: $value;
@@ -32,7 +31,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 10px 0;
-	font-family: "Neutraface-Book", sans-serif;
+	font-family: "Neutraface-BoldItalic", sans-serif;
 	font-weight: normal;
 	line-height: 1;
 	color: $mainPurple;
@@ -94,12 +93,15 @@ header {
 			padding: 5px 1.85%;
 			margin: 1px 1px 0 0;
 			font-size: 1.8em;
-			font-family: $neutrabook;
+			font-family: "Neutraface-BoldItalic";
 			color: $white;
 			border-radius: 10px;
 			float: left;
 			@include transition(background .2s);
 		};
+		a:hover {
+			background-color: $lightPurple;
+		}
 	};
 	.social-media {
 		width: 375px;
@@ -176,7 +178,7 @@ main {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: "NeutraText-BookAlt", sans-serif;
+	font-family: "Neutraface-Book", sans-serif;
 	font-size: 10px;
 	line-height: 20px;
 	color: $black;
@@ -218,7 +220,7 @@ body {
 			margin: 0;
 			padding: 20px 35px 15px 45px;
 			background-color: $white;
-			font-family: $neutrabook;
+			font-family: "Neutraface-BoldItalic";
 			color: $mainPurple;
 			font-size: 1.6em;
 			line-height: 1;
@@ -260,7 +262,7 @@ body {
 			background-color: $mainPurple;
 			color: $white;
 			font-size: 2em;
-			font-family: $neutrabook;
+			font-family: "Neutraface-BoldItalic";
 			border-radius: 5px 5px 0 0;
 			display: block;
 			box-sizing: border-box;
@@ -286,7 +288,7 @@ body {
 		line-height: 1em;
 	};
 	.time, .servings {
-		font-family: "NeutraText-BookAlt", sans-serif;
+		font-family: "Neutraface-Book", sans-serif;
 		font-size: 2.4em;
 		line-height: 1.7em;
 		display: inline-block;
@@ -320,7 +322,7 @@ body {
 		h3 {
 			margin-bottom: 15px;
 			font-size: 3em;
-			font-family: $neutrabook;
+			font-family: "Neutraface-BoldItalic";
 		};
 	};
 	.ingredients-list, .directions ol, .tips-list {
@@ -333,7 +335,7 @@ body {
 		font-size: 2em;
 		line-height: 1.3em;
 	};
-	.ingredients li:before, .tips .li:before {
+	.ingredients li:before, .tips li:before {
 		position: absolute;
 		left: -25px;
 		content: '\2022';
@@ -352,13 +354,18 @@ body {
 		margin-bottom: 10px;
 		margin-top: 12px;
 	};
+	.directions strong, .directions em, .tips strong, .tips em {
+		font-family: "Neutraface-Bold", sans-serif;
+		font-style: normal;
+		font-weight: normal;
+	}
 	.share-bar {
 		h4, ul, li {
 			display: inline-block;
 		};
 		h4 {
 			font-size: 2.4em;
-			font-family: "NeutraText-BookAlt", sans-serif;
+			font-family: "Neutraface-Book", sans-serif;
 			line-height: 1.7em;
 		};
 		.social-media {
@@ -412,7 +419,7 @@ body {
 	};
 	.nutrition h4 {
 		font-size: 2.4em;
-		font-family: "NeutraText-BookAlt", sans-serif;
+		font-family: "Neutraface-Book", sans-serif;
 		line-height: 1.7em;
 	};
 	.nutrition ul {
@@ -429,7 +436,7 @@ body {
 				left: 145px;
 				width: 100px;
 				font-weight: normal;
-				font-family: "NeutraText-BookAlt", sans-serif;
+				font-family: "Neutraface-Book", sans-serif;
 				font-style: normal;
 			};
 		};
@@ -451,7 +458,7 @@ footer {
 	text-align: center;
 	background-color: $footerPurple;
 	font-size: 1.6em;
-	font-family: $neutrabook;
+	font-family: 'Neutraface-BoldItalic';
 	display: block;
 	.wrapper {
 		max-width: 550px;
