@@ -28,7 +28,6 @@ html {
 a {
 	text-decoration: none;
 	cursor: auto;
-	//@include transition(all .2s ease);
 };
 
 h1, h2, h3, h4, h5, h6 {
@@ -80,7 +79,7 @@ header {
 	display: block;
 	h1 {
 		width: 314px;
-		margin: 3px 4% 0 0;
+		margin: 11px 4% 0 0;
 		float: left;
 		a.home {
 			text-indent: -9999px;
@@ -105,7 +104,7 @@ header {
 	.social-media {
 		width: 375px;
 		position: absolute;
-		top: 0px;
+		top: 5px;
 		right: 0;
 		li {
 			float: left;
@@ -124,62 +123,44 @@ header {
 			@include icons-sprite(fb_top);
 			display: block;
 			content: "";
-			height: 45px;
-			width: 40px;
 		}
 		a.facebook:hover {
 			@include icons-sprite(fb_top_alt);
 			content: "";
 			display: block;
-			height: 45px;
-			width: 40px;
 		}
 		a.twitter {
 			text-indent: -9999px;
 			@include icons-sprite(tw_top);
 			display: block;
 			content: "";
-			height: 45px;
-			width: 40px;
 		};
 		a.twitter:hover {
 			@include icons-sprite(tw_top_alt);
 			content: "";
 			display: block;
-			height: 42px;
-			width: 40px;
 		}
 		a.pinterest {
 			text-indent: -9999px;
 			@include icons-sprite(pn_top);
 			display: block;
 			content: "";
-			height: 41px;
-			width: 40px;
-			margin-top: 2px;
 		};
 		a.pinterest:hover {
 			@include icons-sprite(pn_top_alt);
 			content: "";
 			display: block;
-			height: 45px;
-			width: 40px;
 		}
 		a.email {
 			text-indent: -9999px;
 			@include icons-sprite(em_top);
 			display: block;
 			content: "";
-			height: 45px;
-			width: 40px;
-			margin-top: -2px;
 		};
 		a.email:hover {
 			@include icons-sprite(em_top_alt);
 			content: "";
 			display: block;
-			height: 45px;
-			width: 40px;
 		}
 	};
 };
@@ -249,10 +230,9 @@ body {
 			display: inline-block;
 			content: "";
 			float: left;
-			margin-top: -6px;
 			left: 25px;
 			position: absolute;
-			top: 43%;
+			top: 32%;
 		}
 	};
 	.container {
@@ -313,7 +293,7 @@ body {
 		margin: 5px 40px 15px 0;
 	};
 	.time:before {
-		top: 14px;
+		top: 12px;
 		left: 2px;
 		@include icons-sprite(prep);
 	};
@@ -398,51 +378,35 @@ body {
 			a.facebook {
 				@include icons-sprite(fb_mid);
 				content: "";
-				height: 42px;
-				width: 42px;
 				margin-top: -10px;
 			};
 			a.facebook:hover {
 				@include icons-sprite(fb_mid_alt);
 				content: "";
-				height: 46px;
-				width: 42px;
 			}
 			a.twitter {
 				@include icons-sprite(tw_mid);
 				content: "";
-				height: 42px;
-				width: 42px;
 			};
 			a.twitter:hover {
 				@include icons-sprite(tw_mid_alt);
 				content: "";
-				height: 42px;
-				width: 42px;
 			}
 			a.pinterest {
 				@include icons-sprite(pn_mid);
 				content: "";
-				height: 42px;
-				width: 42px;
 			};
 			a.pinterest:hover {
 				@include icons-sprite(pn_mid_alt);
 				content: "";
-				height: 41px;
-				width: 42px;
 			}
 			a.email {
 				@include icons-sprite(em_mid);
 				content: "";
-				height: 42px;
-				width: 42px;
 			};
 			a.email:hover {
 				@include icons-sprite(em_mid_alt);
 				content: "";
-				height: 43px;
-				width: 42px;
 			}
 		};
 	};
@@ -516,15 +480,11 @@ footer {
 			@include icons-sprite(tw_foot);
 			content: "";
 			display: block;
-			height: 80px;
-			width: 80px;
 		};
 		a.twitter:hover {
 			@include icons-sprite(tw_foot_alt);
 			content: "";
 			display: block;
-			height: 80px;
-			width: 80px;
 		}
 	};
 	li {
