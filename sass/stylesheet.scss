@@ -20,6 +20,8 @@ $footerPurple: #69206b;
 		-webkit-font-smoothing: $value;
 	};
 
+
+
 html {
 	font-size: 100%;
 };
@@ -78,7 +80,7 @@ header {
 	display: block;
 	h1 {
 		width: 314px;
-		margin: 11px 4% 0 0;
+		margin: 10px 4% 0 0;
 		float: left;
 		a.home {
 			text-indent: -9999px;
@@ -88,10 +90,10 @@ header {
 		};
 	};
 	nav {
-		margin-top: 12px;
+		margin: 12px 0;
 		a {
 			padding: 5px 1.85%;
-			margin: 1px 1px 0 0;
+			margin: 0 2px;
 			font-size: 1.8em;
 			font-family: "Neutraface-BoldItalic";
 			color: $white;
@@ -106,19 +108,20 @@ header {
 	.social-media {
 		width: 375px;
 		position: absolute;
-		top: 5px;
-		right: 0;
+		top: 16px;
+		right: 0px;
+		display: block;
+		margin: 0 0 10px 27px;
 		li {
 			float: left;
-			margin-left: 7px;
+			margin: 0 0 0 10px;
 			bottom: 0px;
 		};
 		.share {
 			@include icons-sprite(share);
 			content: "";
 			text-indent: -9999em;
-			margin-top: 14px;
-			margin-right: 10px;
+			margin: 12px 5% 0 0;
 		}
 		a.facebook {
 			text-indent: -9999px;
@@ -166,6 +169,10 @@ header {
 		}
 	};
 };
+
+@media screen and (max-width: 1200px) {
+	.share {display: none;}
+}
 
 main {
 	padding-top: 70px;
@@ -235,6 +242,10 @@ body {
 			left: 25px;
 			position: absolute;
 			top: 32%;
+			transition: left .2s;
+		}
+		a:hover:before {
+			left: 20px;
 		}
 	};
 	.container {
