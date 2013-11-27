@@ -1,6 +1,6 @@
 /* line 226, icons/*.png */
 .icons-sprite, header h1 a.home, header .social-media .share, header .social-media a.facebook, header .social-media a.facebook:hover, header .social-media a.twitter, header .social-media a.twitter:hover, header .social-media a.pinterest, header .social-media a.pinterest:hover, header .social-media a.email, header .social-media a.email:hover, body .back-button a:before, .recipe .time:before, .recipe .servings:before, .recipe .share-bar .social-media a.facebook, .recipe .share-bar .social-media a.facebook:hover, .recipe .share-bar .social-media a.twitter, .recipe .share-bar .social-media a.twitter:hover, .recipe .share-bar .social-media a.pinterest, .recipe .share-bar .social-media a.pinterest:hover, .recipe .share-bar .social-media a.email, .recipe .share-bar .social-media a.email:hover, footer h5, footer .social-media a.twitter, footer .social-media a.twitter:hover {
-  background: url('/./img/icons-s3b83ab6fe7.png') no-repeat;
+  background: url('../img/icons.png') no-repeat;
 }
 
 /* example:
