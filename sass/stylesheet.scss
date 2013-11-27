@@ -1,8 +1,11 @@
+$baseUrl: './';
 @import "compass";
 @import "compass/css3/transition";
 @import "compass/css3/transform";
 @import "compass/utilities/sprites/base";
 @import "icons/*.png";
+@import "fonts";
+
 $icons-sprite-dimensions: true;
 
 $mainPurple: #78297a;
@@ -17,6 +20,8 @@ $footerPurple: #69206b;
 		-webkit-font-smoothing: $value;
 	};
 
+
+
 html {
 	font-size: 100%;
 };
@@ -24,12 +29,11 @@ html {
 a {
 	text-decoration: none;
 	cursor: auto;
-	@include transition(all .2s ease);
 };
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 10px 0;
-	font-family: "NeutraText-BoldItalicAlt", sans-serif;
+	font-family: "Neutraface-BoldItalic", sans-serif;
 	font-weight: normal;
 	line-height: 1;
 	color: $mainPurple;
@@ -65,8 +69,9 @@ img {
 
 header {
 	position: fixed;
-	width: 100%;
-	top: 0px;
+	width: 95%;
+	top: 0;
+	left: 0;
 	background-color: $mainPurple;
 	height: 54px;
 	box-shadow: 0 4px 0 0 rgba(0,0,0,.2);
@@ -74,9 +79,10 @@ header {
 	padding: 8px 2.5%;
 	z-index: 100;
 	display: block;
+	float: left;
 	h1 {
 		width: 314px;
-		margin: 3px 4% 0 0;
+		margin: 10px 4% 0 0;
 		float: left;
 		a.home {
 			text-indent: -9999px;
@@ -86,99 +92,92 @@ header {
 		};
 	};
 	nav {
-		margin-top: 12px;
+		margin: 12px 0;
 		a {
 			padding: 5px 1.85%;
-			margin: 1px 1px 0 0;
+			margin: 0 2px;
 			font-size: 1.8em;
-			font-family: "NeutraText-BoldItalicAlt", sans-serif;
+			font-family: "Neutraface-BoldItalic";
 			color: $white;
 			border-radius: 10px;
 			float: left;
 			@include transition(background .2s);
-		};	
+		};
+		a:hover {
+			background-color: $lightPurple;
+		}
 	};
 	.social-media {
-		width: 375px;
 		position: absolute;
-		top: 0px;
-		right: 0;
+		top: 17px;
+		right: 0px;
+		display: block;
+		margin: 0 0 10px 25px;
+		height: 38px;
+		width: 300px;
+		padding: 0;
 		li {
 			float: left;
-			margin-left: 7px;
+			margin: 0 0 0 10px;
 			bottom: 0px;
 		};
 		.share {
 			@include icons-sprite(share);
 			content: "";
 			text-indent: -9999em;
-			margin-top: 14px;
-			margin-right: 10px;
+			margin: 11px 5% 0 0;
 		}
 		a.facebook {
 			text-indent: -9999px;
 			@include icons-sprite(fb_top);
 			display: block;
 			content: "";
-			height: 45px;
-			width: 40px;
-		}	
+		}
 		a.facebook:hover {
 			@include icons-sprite(fb_top_alt);
 			content: "";
 			display: block;
-			height: 45px;
-			width: 40px;
-		}	
+		}
 		a.twitter {
 			text-indent: -9999px;
 			@include icons-sprite(tw_top);
 			display: block;
 			content: "";
-			height: 45px;
-			width: 40px;
 		};
 		a.twitter:hover {
 			@include icons-sprite(tw_top_alt);
 			content: "";
 			display: block;
-			height: 42px;
-			width: 40px;
 		}
 		a.pinterest {
 			text-indent: -9999px;
 			@include icons-sprite(pn_top);
 			display: block;
 			content: "";
-			height: 41px;
-			width: 40px;
-			margin-top: 2px;
 		};
 		a.pinterest:hover {
 			@include icons-sprite(pn_top_alt);
 			content: "";
 			display: block;
-			height: 45px;
-			width: 40px;
 		}
 		a.email {
 			text-indent: -9999px;
 			@include icons-sprite(em_top);
 			display: block;
 			content: "";
-			height: 45px;
-			width: 40px;
-			margin-top: -2px;			
 		};
 		a.email:hover {
 			@include icons-sprite(em_top_alt);
 			content: "";
 			display: block;
-			height: 45px;
-			width: 40px;
 		}
 	};
 };
+
+@media screen and (max-device-width: 1200px), screen and (max-width: 1200px) {
+	.share {display: none;}
+	header .social-media {width: 205px;}
+}
 
 main {
 	padding-top: 70px;
@@ -191,7 +190,7 @@ main {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: "NeutraText-BookAlt", sans-serif;
+	font-family: "Neutraface-Book", sans-serif;
 	font-size: 10px;
 	line-height: 20px;
 	color: $black;
@@ -233,7 +232,7 @@ body {
 			margin: 0;
 			padding: 20px 35px 15px 45px;
 			background-color: $white;
-			font-family: "NeutraText-BoldItalicAlt", sans-serif;
+			font-family: "Neutraface-BoldItalic";
 			color: $mainPurple;
 			font-size: 1.6em;
 			line-height: 1;
@@ -245,10 +244,13 @@ body {
 			display: inline-block;
 			content: "";
 			float: left;
-			margin-top: -6px;
 			left: 25px;
 			position: absolute;
-			top: 43%;
+			top: 32%;
+			transition: left .2s;
+		}
+		a:hover:before {
+			left: 20px;
 		}
 	};
 	.container {
@@ -276,7 +278,7 @@ body {
 			background-color: $mainPurple;
 			color: $white;
 			font-size: 2em;
-			font-family: "NeutraText-BoldItalicAlt", sans-serif;
+			font-family: "Neutraface-BoldItalic";
 			border-radius: 5px 5px 0 0;
 			display: block;
 			box-sizing: border-box;
@@ -302,14 +304,14 @@ body {
 		line-height: 1em;
 	};
 	.time, .servings {
-		font-family: "NeutraText-BookAlt", sans-serif;
+		font-family: "Neutraface-Book", sans-serif;
 		font-size: 2.4em;
 		line-height: 1.7em;
 		display: inline-block;
 		margin: 5px 40px 15px 0;
 	};
 	.time:before {
-		top: 14px;
+		top: 12px;
 		left: 2px;
 		@include icons-sprite(prep);
 	};
@@ -336,7 +338,7 @@ body {
 		h3 {
 			margin-bottom: 15px;
 			font-size: 3em;
-			font-family: "NeutraText-BoldItalicAlt", sans-serif;
+			font-family: "Neutraface-BoldItalic";
 		};
 	};
 	.ingredients-list, .directions ol, .tips-list {
@@ -349,7 +351,7 @@ body {
 		font-size: 2em;
 		line-height: 1.3em;
 	};
-	.ingredients li:before, .tips .li:before {
+	.ingredients li:before, .tips li:before {
 		position: absolute;
 		left: -25px;
 		content: '\2022';
@@ -368,13 +370,18 @@ body {
 		margin-bottom: 10px;
 		margin-top: 12px;
 	};
+	.directions strong, .directions em, .tips strong, .tips em {
+		font-family: "Neutraface-Bold", sans-serif;
+		font-style: normal;
+		font-weight: normal;
+	}
 	.share-bar {
 		h4, ul, li {
 			display: inline-block;
 		};
 		h4 {
 			font-size: 2.4em;
-			font-family: "NeutraText-BookAlt", sans-serif;
+			font-family: "Neutraface-Book", sans-serif;
 			line-height: 1.7em;
 		};
 		.social-media {
@@ -394,57 +401,41 @@ body {
 			a.facebook {
 				@include icons-sprite(fb_mid);
 				content: "";
-				height: 42px;
-				width: 42px;
 				margin-top: -10px;
 			};
 			a.facebook:hover {
 				@include icons-sprite(fb_mid_alt);
 				content: "";
-				height: 46px;
-				width: 42px;
 			}
 			a.twitter {
 				@include icons-sprite(tw_mid);
 				content: "";
-				height: 42px;
-				width: 42px;
 			};
 			a.twitter:hover {
 				@include icons-sprite(tw_mid_alt);
 				content: "";
-				height: 42px;
-				width: 42px;
 			}
 			a.pinterest {
 				@include icons-sprite(pn_mid);
 				content: "";
-				height: 42px;
-				width: 42px;
 			};
 			a.pinterest:hover {
 				@include icons-sprite(pn_mid_alt);
 				content: "";
-				height: 41px;
-				width: 42px;
-			}			
+			}
 			a.email {
 				@include icons-sprite(em_mid);
 				content: "";
-				height: 42px;
-				width: 42px;
 			};
 			a.email:hover {
 				@include icons-sprite(em_mid_alt);
 				content: "";
-				height: 43px;
-				width: 42px;
-			}			
+			}
 		};
 	};
 	.nutrition h4 {
 		font-size: 2.4em;
-		font-family: "NeutraText-BookAlt", sans-serif;
+		font-family: "Neutraface-Book", sans-serif;
 		line-height: 1.7em;
 	};
 	.nutrition ul {
@@ -461,7 +452,7 @@ body {
 				left: 145px;
 				width: 100px;
 				font-weight: normal;
-				font-family: "NeutraText-BookAlt", sans-serif;
+				font-family: "Neutraface-Book", sans-serif;
 				font-style: normal;
 			};
 		};
@@ -483,7 +474,7 @@ footer {
 	text-align: center;
 	background-color: $footerPurple;
 	font-size: 1.6em;
-	font-family: "NeutraText-BoldItalicAlt", sans-serif;
+	font-family: 'Neutraface-BoldItalic';
 	display: block;
 	.wrapper {
 		max-width: 550px;
@@ -512,15 +503,11 @@ footer {
 			@include icons-sprite(tw_foot);
 			content: "";
 			display: block;
-			height: 80px;
-			width: 80px;
 		};
 		a.twitter:hover {
 			@include icons-sprite(tw_foot_alt);
 			content: "";
 			display: block;
-			height: 80px;
-			width: 80px;
 		}
 	};
 	li {
